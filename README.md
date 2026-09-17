@@ -155,7 +155,7 @@ NOVA: 🤔 I'm not sure how to respond to that yet.
 
 Try "help" to see what I understand.
 This demonstrates how the chatbot handles unknown input.
-
+```
 ## 🧠 How NOVA Decides Its Responses
 NOVA uses a rule-based decision-making system.
 
@@ -231,6 +231,7 @@ elif any(word in text for word in ["thank", "thanks"]):
 This allows NOVA to recognize different ways of expressing thanks.
 
 ## 🛠️ Technologies Used
+
 - Technology	Purpose
 - Python	Core programming language
 - Streamlit	Web-based user interface
@@ -272,7 +273,7 @@ technology details, and usage instructions.
 
 ## ⚙️ Installation
 Step 1: Clone or Download the Project
-
+([Click here](https://github.com/harshitha2610-coder/Rule-Based---chatbot.git)
 
 Open the project folder in VS Code.
 Windows : python -m venv venv
@@ -389,6 +390,7 @@ User interface design
 Basic chatbot architecture
 
 ### 🚀 Future Improvements
+
 Although the current project is intentionally rule-based, it could
 be extended in the future with:
 
