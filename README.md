@@ -1,405 +1,359 @@
-# 📌 Project Summary
+# 🤖 Rule-Based AI Chatbot
 
-**NOVA** is a Python-based rule-based chatbot with a Streamlit web
-interface.
+A simple **rule-based chatbot built with Python** that responds to user messages using predefined keywords, patterns, and conditional logic.
 
-The project demonstrates how predefined rules and keyword
-matching can be used to create a simple conversational system.
+The chatbot identifies common words or phrases in the user's input and provides an appropriate predefined response. When it cannot recognize the input, it uses a fallback response.
 
-The chatbot receives user input, processes the text, checks it
-against predefined conditions, and returns the appropriate
-response.
+## 🚀 Live Demo
 
-If no rule matches the input, NOVA uses a fallback response.
+**Streamlit App:**
+*https://rule-based---chatbot-by-moharshi.streamlit.app/*
 
----
+## 📌 Project Overview
 
-# 👩‍💻 Author
+This project demonstrates the basic concept of a **rule-based chatbot** using Python.
 
-**Harshitha L**
-
-**Internship Project — Rule-BasedChatbot**
-
----
-
-# 📜 License
-
-This project was created for educational and internship purposes.
-
-
-
-# 🤖 NOVA — Rule-Based Chatbot
-
-A beginner-friendly **rule-based chatbot built with Python and Streamlit**.
-
-NOVA responds to user messages using predefined keywords and
-`if / elif / else` decision-making logic. The project demonstrates
-how a simple chatbot can understand common user inputs without using
-machine learning or an external AI API.
-
----
-
-## 📌 Internship Task 1
-
-### Task
-
-Build a simple chatbot that responds to user input using predefined
-rules or keywords.
-
-### Requirements
-
-- Handle common greetings.
-- Answer simple questions.
-- Provide a fallback response for unknown input.
-- Use Python with basic `if-else` or pattern-matching logic.
-- Add comments explaining how the chatbot decides its responses.
-
-### Requirement Status
-
-| Requirement | Status |
-|---|---|
-| Predefined rules/keywords | ✅ Completed |
-| Common greetings | ✅ Completed |
-| Simple questions | ✅ Completed |
-| Fallback for unknown input | ✅ Completed |
-| Python implementation | ✅ Completed |
-| If/elif/else logic | ✅ Completed |
-| Comments explaining decision logic | ✅ Completed |
-| Streamlit web interface | ✅ Added |
-| Chat history | ✅ Added |
-| Clear conversation option | ✅ Added |
-
----
-
-
-### 👋 Greeting Detection
-
-NOVA recognizes common greetings such as:
-
-- `hello`
-- `hi`
-- `hey`
-- `good morning`
-- `good afternoon`
-- `good evening`
-
-Example:
-
-```text
-You: hello
-
-NOVA: 👋 Hello! I'm NOVA. It's nice to meet you!
-🤖 Identity Questions
-Users can ask NOVA about its identity.
-
-Example:
-
-You: Who are you?
-
-NOVA: 🤖 I'm NOVA, a rule-based chatbot created with Python!
-💡 Feature Information
-NOVA can explain what it is capable of doing.
-
-Example:
-
-You: What can you do?
-
-NOVA: 💡 I can respond to greetings, answer simple questions,
-tell you the current time and date, provide help, and handle
-basic conversation.
-😊 Simple Conversation
-NOVA can respond to basic conversational messages such as:
-
-You: How are you?
-
-NOVA: 😊 I'm doing great! Thanks for asking.
-🕐 Current Time
-NOVA uses Python's datetime module to display the current time.
-
-Example:
-
-You: What time is it?
-
-NOVA: 🕐 The current time is 12:30 PM.
-📅 Current Date
-NOVA can also provide the current date.
-
-Example:
-
-You: What is today's date?
-
-NOVA: 📅 Today is Thursday, 17 September 2026.
-📚 Help Command
-Users can type:
-
-help
-NOVA displays the commands and questions it understands.
-
-🙏 Thank-You Detection
-NOVA recognizes simple positive feedback.
-
-Example:
-
-You: Thank you
-
-NOVA: 😊 You're very welcome!
-🤔 Fallback Response
-If NOVA does not recognize the user's input, it provides a
-fallback response instead of crashing.
-
-Example:
-
-You: Tell me about quantum computing.
-
-NOVA: 🤔 I'm not sure how to respond to that yet.
-
-Try "help" to see what I understand.
-This demonstrates how the chatbot handles unknown input.
-```
-## 🧠 How NOVA Decides Its Responses
-NOVA uses a rule-based decision-making system.
-
-The process is:
-
-                 User Input
-                     │
-                     ▼
-              Normalize Input
-             lowercase + strip
-                     │
-                     ▼
-              Check Rule 1
-                     │
-                     ▼
-              Check Rule 2
-                     │
-                     ▼
-              Check Rule 3
-                     │
-                    ...
-                     │
-                     ▼
-             Matching Rule?
-               /         \
-             YES          NO
-              │            │
-              ▼            ▼
-       Return Defined    Fallback
-          Response       Response
-The chatbot checks predefined conditions from top to bottom.
+Instead of using a machine learning model or external AI API, the chatbot uses predefined rules to determine how it should respond.
 
 For example:
 
-if text in ["hi", "hello", "hey"]:
-    return "Hello! I'm NOVA."
+```text
+User: Hello
+Bot: Hello! 👋 How can I help you?
 
-elif "time" in text:
-    return "The current time is..."
+User: How are you?
+Bot: I'm doing great! Thanks for asking. 😊
+
+User: What is Python?
+Bot: Python is a popular programming language.
+
+User: Who are you?
+Bot: I'm a simple rule-based chatbot.
+
+User: Tell me something random
+Bot: Sorry, I don't understand that yet.
+```
+
+## ✨ Features
+
+* 🤖 Simple chatbot interface
+* 💬 Responds to user messages
+* 👋 Handles common greetings
+* ❓ Handles predefined questions
+* 🔑 Uses keyword matching
+* 🧠 Uses basic `if-else` logic
+* 🔄 Provides fallback responses
+* 📝 Comments explain the chatbot's decision-making logic
+* 🌐 Can be deployed as a Streamlit web application
+* ⚡ Lightweight and easy to understand
+
+## 🧠 How the Chatbot Decides Its Responses
+
+The chatbot follows a simple rule-based decision process.
+
+When the user enters a message:
+
+1. The input is converted to lowercase.
+2. The chatbot checks the message for predefined keywords or phrases.
+3. If a matching rule is found, the corresponding response is returned.
+4. If no rule matches the input, the chatbot provides a fallback response.
+
+### Example
+
+```python
+if "hello" in user_input:
+    response = "Hello! 👋 How can I help you?"
+
+elif "how are you" in user_input:
+    response = "I'm doing great! 😊"
+
+elif "your name" in user_input:
+    response = "I'm a rule-based chatbot."
 
 else:
-    return "I'm not sure how to respond..."
-The else condition acts as the fallback rule.
+    response = "Sorry, I don't understand that yet."
+```
 
-###🔍 Rule-Based Logic
-The chatbot uses two main types of matching.
+The chatbot does **not** generate new answers using a language model. Its responses come from the predefined rules in the program.
 
-1. Exact Matching
-Some inputs are checked against a list of predefined phrases.
+## 🔄 Chatbot Flow
 
-Example:
-
-if text in ["hi", "hello", "hey"]:
-This handles common greetings.
-
-2. Keyword Matching
-Some rules search for keywords inside the user's message.
-
-Example:
-
-elif "time" in text:
-This allows NOVA to respond to messages such as:
-
-What time is it?
-Can you tell me the time?
-What is the current time?
-3. Keyword List Matching
-The any() function is also used for simple keyword detection.
-
-Example:
-
-elif any(word in text for word in ["thank", "thanks"]):
-This allows NOVA to recognize different ways of expressing thanks.
+```text
+           Start
+             │
+             ▼
+     User enters a message
+             │
+             ▼
+      Convert input to
+        lowercase
+             │
+             ▼
+   Check predefined rules
+             │
+       ┌─────┴─────┐
+       │           │
+     Match       No Match
+       │           │
+       ▼           ▼
+ Return matching  Return
+   response       fallback
+       │           │
+       └─────┬─────┘
+             ▼
+      Display response
+             │
+             ▼
+        Continue chat
+```
 
 ## 🛠️ Technologies Used
 
-- Technology	Purpose
-- Python	Core programming language
-- Streamlit	Web-based user interface
-- datetime	Current date and time
-- If/Elif/Else	Rule-based decision making
-- Keyword Matching	Detecting user intent
-- Session State	Maintaining chat history
+* **Python**
+* **Streamlit**
+* **Conditional Statements**
+* **Keyword / Pattern Matching**
+* **Git & GitHub**
 
+## 📂 Project Structure
 
-## 📁 Project Structure
-NOVA-Rule-Based-Chatbot/
+```text
+rule-based-chatbot/
 │
 ├── app.py
 ├── requirements.txt
 └── README.md
-app.py
+```
+
+### `app.py`
+
 Contains:
 
-Streamlit interface
+* Streamlit chatbot interface
+* User input handling
+* Keyword matching
+* Predefined chatbot rules
+* Response selection
+* Fallback response logic
+* Comments explaining how the chatbot makes decisions
 
-Chat functionality
+### `requirements.txt`
 
-Predefined chatbot rules
+Contains the Python dependency required to run the Streamlit application.
 
-Keyword matching
+```text
+streamlit
+```
 
-Date/time functionality
+## 💻 Run Locally
 
-Fallback handling
+### 1. Clone the repository
 
-Comments explaining the decision process
+```bash
+git clone https://github.com/harshitha2610-coder/Rule-Based---chatbot.git
+```
 
-requirements.txt
-Contains the Python dependency required to run the application.
+### 2. Navigate to the project directory
 
-README.md
-Contains the project documentation, requirements, features,
-technology details, and usage instructions.
+```bash
+cd rule-based-chatbot
+```
 
-## ⚙️ Installation
-Step 1: Clone or Download the Project
-([Click here](https://github.com/harshitha2610-coder/Rule-Based---chatbot.git)
+### 3. Install dependencies
 
-Open the project folder in VS Code.
-Windows : python -m venv venv
- Activate it: venv\Scripts\activate
-Step 2: Install Dependencies
-Open the VS Code terminal and run:
-
+```bash
 python -m pip install -r requirements.txt
-Step 3: Run the Streamlit Application
-Run: python -m streamlit run app.py
-The application will start locally.
+```
 
-You should see a message similar to:
+### 4. Run the application
 
-You can now view your Streamlit app in your browser.
+```bash
+python -m streamlit run app.py
+```
 
-Local URL: http://localhost:8501
-Open the displayed local URL in your browser.
+The chatbot will open in your browser.
 
-💬 Example Conversations
-Example 1 — Greeting
-You: Hi
+## 🌐 Deployment
 
-NOVA: 👋 Hello! I'm NOVA. It's nice to meet you!
-Example 2 — Identity
-You: What is your name?
+The chatbot can be deployed using **Streamlit Community Cloud**.
 
-NOVA: 🤖 I'm NOVA, a rule-based chatbot created with Python!
-Example 3 — Time
-You: What time is it?
+### Deployment Steps
 
-NOVA: 🕐 The current time is 12:30 PM.
-Example 4 — Date
-You: What is today's date?
+1. Push the project files to GitHub.
+2. Open Streamlit Community Cloud.
+3. Connect your GitHub account.
+4. Select the chatbot repository.
+5. Set `app.py` as the main file.
+6. Click **Deploy**.
+7. Streamlit will provide a public URL for the chatbot.
 
-NOVA: 📅 Today is Thursday, 17 September 2026.
-Example 5 — Help
-You: Help
+## 💬 Example Conversations
 
-NOVA: 📚 Here are some things you can ask me...
-Example 6 — Unknown Input
-You: Explain artificial intelligence.
+### Greeting
 
-NOVA: 🤔 I'm not sure how to respond to that yet.
-🎨 Streamlit Interface
-The project uses Streamlit to provide a simple web-based chatbot
-interface instead of a traditional command-line interface.
+```text
+User: Hi
 
-The interface includes:
+Bot: Hello! 👋 How can I help you?
+```
 
-🤖 NOVA branding
+### Asking about the chatbot
 
-💬 Chat message interface
+```text
+User: What is your name?
 
-🧠 Rule explanation sidebar
+Bot: I'm a simple rule-based chatbot.
+```
 
-📋 Available commands
+### General Question
 
-⚙️ Technology information
+```text
+User: What is Python?
 
-🗑️ Clear conversation button
+Bot: Python is a popular programming language.
+```
 
-💡 Fallback responses
+### Unknown Input
 
-🧪 Testing
-The chatbot can be tested using the following inputs:
+```text
+User: What is the weather on Mars?
 
+Bot: Sorry, I don't understand that yet.
+```
 
-🔒 No External AI API
-NOVA is intentionally implemented as a rule-based chatbot.
+The fallback response ensures that the chatbot can handle inputs that do not match any predefined rule.
 
-It does not require:
+## 🔑 Example Rules
 
-❌ OpenAI API
+The chatbot can be designed with rules such as:
 
-❌ Gemini API
+| User Input / Keyword | Chatbot Response                          |
+| -------------------- | ----------------------------------------- |
+| `hello`              | Hello! 👋 How can I help you?             |
+| `hi`                 | Hi there! 😊                              |
+| `hey`                | Hey! 👋                                   |
+| `how are you`        | I'm doing great!                          |
+| `your name`          | I'm a rule-based chatbot.                 |
+| `python`             | Python is a popular programming language. |
+| `bye`                | Goodbye! Have a great day! 👋             |
+| Unknown input        | Sorry, I don't understand that yet.       |
 
-❌ Machine learning model
+These rules can be expanded by adding additional conditions to the program.
 
-❌ External chatbot API
+## 🧩 Core Logic
 
-❌ Internet connection for chatbot responses
+The chatbot primarily uses **if-elif-else** statements.
 
-The chatbot's responses are generated from predefined rules
-written in Python.
+```text
+IF input matches greeting
+        ↓
+    Greeting response
 
-🎯 Learning Objectives
-This project demonstrates the following programming concepts:
+ELSE IF input matches a known question
+        ↓
+    Predefined answer
 
-Python functions
+ELSE IF input matches another keyword
+        ↓
+    Corresponding response
 
-Conditional statements
+ELSE
+        ↓
+    Fallback response
+```
 
-if / elif / else
+This makes the chatbot's decision-making process simple, transparent, and easy to understand.
 
-Lists
+## 🎯 Learning Objectives
 
-String manipulation
+This project demonstrates:
 
-Keyword matching
+* Python fundamentals
+* Conditional statements
+* String manipulation
+* Keyword matching
+* Pattern-based decision making
+* Function usage
+* User input handling
+* Basic chatbot design
+* Streamlit interface development
+* GitHub project management
+* Web application deployment
 
-any() function
+## ⚠️ Limitations
 
-Exception handling
+Since this is a rule-based chatbot:
 
-Date and time handling
+* It only understands predefined keywords and patterns.
+* It cannot understand complex natural language like modern AI assistants.
+* It does not learn from conversations.
+* It does not generate completely new responses.
+* Similar questions may need multiple rules to be handled correctly.
 
-Streamlit
+For example, if a rule only checks for:
 
-Session state
+```text
+"how are you"
+```
 
-User interface design
+then a differently worded question such as:
 
-Basic chatbot architecture
+```text
+"How are you doing today?"
+```
 
-### 🚀 Future Improvements
+may require additional pattern handling.
 
-Although the current project is intentionally rule-based, it could
-be extended in the future with:
+## 🔮 Future Improvements
 
-More predefined conversation rules
+Possible improvements include:
 
-More keyword categories
+* Add more predefined rules
+* Support more variations of user questions
+* Use regular expressions for better pattern matching
+* Add conversation history
+* Add chatbot personality
+* Add typing indicators
+* Add timestamps to messages
+* Add voice input and output
+* Add multilingual support
+* Upgrade from rule-based responses to an NLP/LLM-based chatbot
+* Add intent classification
+* Store frequently asked questions
 
-Sentiment detection
+## 📚 Concepts Demonstrated
 
-Multiple languages
+This project introduces the fundamental idea behind **rule-based conversational systems**.
 
-Database-backed conversation history
+The chatbot follows explicit rules rather than learning patterns from a dataset.
+
+```text
+User Input
+    ↓
+Text Processing
+    ↓
+Keyword / Pattern Matching
+    ↓
+Rule Selection
+    ↓
+Predefined Response
+    ↓
+User
+```
+
+This makes the system predictable and easy to debug.
+
+## 📜 License
+
+This project is open-source and available for educational and personal use.
+
+## 👩‍💻 Author
+
+**Harshitha L**
+
+GitHub:
+*https://github.com/harshitha2610-coder*
+
+---
+
+⭐ If you found this project useful, consider giving the repository a **star**!
